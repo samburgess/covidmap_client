@@ -24,6 +24,7 @@ class HeatMap extends Component{
 
     componentDidMount() {
         console.log("mount")
+        console.log("http update???? ")
         fetch("http://samburgess-covidmap.appspot.com")
           .then(res => res.json())
           .then(
