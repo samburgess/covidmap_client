@@ -75,6 +75,7 @@ class HeatMap extends Component{
 
         dayList = this.state.days.map( (el) =>
             <li
+                className="DayEl"
                 key = {el.toString()}
                 onClick = {this.state.loading ? null : this.changeDate}
                 value={el}>{el}</li>
@@ -84,7 +85,7 @@ class HeatMap extends Component{
           <div className="Wrapper">
             {this.state.date_string}
             <div className="Map">
-                {this.state.loading ? <div>Getting data ... </div> : <ul className="DayList">{dayList}</ul>}
+                {this.state.loading ? <div>Getting data ....</div> : <ul className="DayList">{dayList}</ul>}
                 <GoogleMapReact  
                     ref={(el) => this._googleMap = el}
                     bootstrapURLKeys={apiKey}
