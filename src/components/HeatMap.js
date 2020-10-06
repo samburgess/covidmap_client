@@ -24,7 +24,7 @@ class HeatMap extends Component{
 
     componentDidMount() {
         console.log("mount")
-        fetch("http://ec2-52-37-141-72.us-west-2.compute.amazonaws.com:3001")
+        fetch("https://ec2-52-37-141-72.us-west-2.compute.amazonaws.com:3001")
           .then(res => res.json())
           .then(
             (result) => {
